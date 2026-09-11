@@ -29,3 +29,8 @@ Instale as dependências necessárias (pip install streamlit pandas openpyxl).
 Insira sua base de dados Healthcare.xlsx na pasta data/.
 
 Rode o comando streamlit run app.py (ou o nome do seu arquivo) no terminal.
+
+<img width="1920" height="819" alt="Captura de Tela (256)" src="https://github.com/user-attachments/assets/15554b09-4bff-41af-a60b-22849aebfdac" />
+<img width="1920" height="808" alt="Captura de Tela (257)" src="https://github.com/user-attachments/assets/ab0ae0ce-3b8c-43b1-923c-41f6eb51e46c" />
+
+
