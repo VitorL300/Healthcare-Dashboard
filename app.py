@@ -5,7 +5,7 @@ from datetime import timedelta
 
 ### * = TRADUÇÃO
 
-st.set_page_config(page_title='Healthcare Dashborad', layout='wide', page_icon='🚑')
+st.set_page_config(page_title='Healthcare Dashboard', layout='wide', page_icon='🚑')
 
 st.markdown("""
 <style>
