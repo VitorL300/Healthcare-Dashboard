@@ -467,3 +467,128 @@ with tab1:
         fig.update_layout(**CHART_THEME, showlegend=False)
         
         st.plotly_chart(fig, use_container_width=True)
+        
+    
+    with col2:
+        gender_data = df['Gender'].value_counts().reset_index()
+        gender_data.columns = ['Gender', 'Count']
+        
+        fig = px.pie(gender_data, 
+                     names='Gender', 
+                     values='Count',
+                     title='Gender Distribution',
+                     color_discrete_sequence=PALETTE,
+                     hole=0.5)
+        
+        fig.update_layout(**CHART_THEME)
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+
+    with col3: 
+        cond_data =  df['Medical Condition'].value_counts().reset_index()
+        cond_data.columns = ['Condition', 'Count']
+
+        fig = px.bar(cond_data, x = 'Condition', y = 'Count',
+                     title = 'Medical Condition',
+                     color = 'Condition',
+                     color_discrete_sequence = PALETTE )
+
+        fig.update_traces(textposition = 'outside', marker_line_width = 0)
+
+        fig.update_layout(**CHART_THEME, showlegend = False, xaxis_tickangle = -30)
+
+        st.plotly_chart(fig, use_container_width= True)
+        
+    
+    # Blood Type 
+    
+    #sort_values - Dados organizados do menor para o maior
+    blood_data = df['Blood Type'].value_counts().sort_values().reset_index()
+
+    blood_data.columns = ['Blood Type', 'Count']
+
+    #Porcentagem
+    blood_data['Pct'] = (blood_data['Count'] / blood_data['Count'].sum() * 100).round(1)
+
+    fig = px.bar(
+        blood_data,
+        x = 'Count', y = 'Blood Type',
+        orientation= 'h',
+        text = blood_data['Pct'].astype(str) + '%',
+        title = 'Blood Type Distribution',
+        color = 'Blood Type', color_discrete_sequence= PALETTE
+
+    )
+
+    fig.update_traces(textposition = 'outside', marker_line_width =0)
+    fig.update_layout(**CHART_THEME, showlegend = False)
+    st.plotly_chart(fig, use_container_width= True)
+    
+    
+    
+with tab2:
+    col1, col2, col3, col4 = st.columns(4)
+
+    col1.metric('Total Revenue', f'{df['Billing Amount'].sum():,.0f}')
+    col2.metric('Avg Billing', f'{df['Billing Amount'].mean():,.0f}')
+    col3.metric('Max Bill', f'{df['Billing Amount'].max():,.0f}')
+    col4.metric('Min Bill', f'{df['Billing Amount'].min():,.0f}')
+
+    st.divider()
+
+    col1, col2 = st.columns(2)
+
+
+    with col1:
+
+        cond_rev = df.groupby('Medical Condition')['Billing Amount'].sum().reset_index()
+        cond_rev.columns = ['Condition', 'Revenue']
+
+        cond_rev = cond_rev.sort_values('Revenue', ascending= True)
+
+        fig = px.bar(
+            cond_rev,
+            x = 'Revenue' , y = 'Condition',
+            orientation= 'h',
+            title = 'Revenue by Medical Condition',
+            color = 'Condition', color_discrete_sequence= PALETTE,
+            text = 'Revenue'
+
+        )
+
+        fig.update_traces(texttemplate =  '₹%{text:,.0f},', textposition = 'outside', marker_line_width = 0)
+
+        fig.update_layout(**CHART_THEME)
+
+        st.plotly_chart(fig,use_container_width= True)
+
+    with col2:
+
+        ins_rev = df.groupby('Insurance Provider')['Billing Amount'].sum().reset_index()
+
+        ins_rev.columns = ['Provider', 'Revenue']
+
+        fig = px.pie(
+            ins_rev,
+            names = 'Provider',
+            values= 'Revenue',
+            title = 'Revenue by Insurance Provider',
+            color_discrete_sequence= PALETTE, hole =0.45
+
+        )
+
+        fig.update_layout(**CHART_THEME)
+
+        st.plotly_chart(fig, use_container_width= True)
+
+
+with tab3:
+
+    st.markdown(f'{len(df):,} Records')
+
+    st.dataframe(
+        df.sort_values('Date of Admission', ascending= False),
+        use_container_width= True,
+        height = 500
+    )
