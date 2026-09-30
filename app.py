@@ -10,6 +10,7 @@ st.set_page_config(page_title='Healthcare Dashboard', layout='wide', page_icon='
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --bg:        #030712;
@@ -161,7 +162,7 @@ div[data-testid="stMetric"]:hover {
     box-shadow: 0 1px 0 rgba(255,255,255,.09) inset, 0 28px 60px rgba(0,0,0,.55), 0 0 30px rgba(0,212,170,.07);
 }
 div[data-testid="stMetric"] [data-testid="stMetricLabel"] {
-    font-family: 'Syne', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-size: .72rem !important;
     font-weight: 700 !important;
     text-transform: uppercase;
@@ -169,7 +170,7 @@ div[data-testid="stMetric"] [data-testid="stMetricLabel"] {
     color: var(--muted) !important;
 }
 div[data-testid="stMetric"] [data-testid="stMetricValue"] {
-    font-family: 'Syne', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-size: 1.75rem !important;
     font-weight: 800 !important;
     letter-spacing: -.5px;
