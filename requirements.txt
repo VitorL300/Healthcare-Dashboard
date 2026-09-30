@@ -1,4 +1,4 @@
-pandas 
-plotly.express 
+pandas
+plotly
 streamlit 
-datetime 
+openpyxl
