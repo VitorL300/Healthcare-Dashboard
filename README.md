@@ -1,6 +1,6 @@
 ﻿# 🚑 Healthcare Intelligence Dashboard
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](COLE_AQUI_O_LINK_DO_SEU_APP)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://healthcare-dashboard-vitor.streamlit.app/)
 
 Este projeto é um painel interativo desenvolvido em Python utilizando Streamlit e Pandas para análise de dados hospitalares e financeiros. Ele permite que gestores da área da saúde monitorem métricas cruciais de internação e faturamento de forma dinâmica, cruzando informações de pacientes através de uma interface amigável.
 
@@ -44,9 +44,8 @@ Este projeto é um painel interativo desenvolvido em Python utilizando Streamlit
 
 O dashboard está hospedado e em produção na nuvem.
 
-🔗 **[Acesse o Dashboard Online Aqui](COLE_AQUI_O_LINK_DO_SEU_APP)**
+🔗 **[Acesse o Dashboard Online Aqui](https://healthcare-dashboard-vitor.streamlit.app/)**
 
-<img width="1920" height="819" alt="Captura de Tela (256)" src="https://github.com/user-attachments/assets/15554b09-4bff-41af-a60b-22849aebfdac" />
-<img width="1920" height="808" alt="Captura de Tela (257)" src="https://github.com/user-attachments/assets/ab0ae0ce-3b8c-43b1-923c-41f6eb51e46c" />
+
 
 
