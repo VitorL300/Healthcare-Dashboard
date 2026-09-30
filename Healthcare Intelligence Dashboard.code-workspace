@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../EDA_gasolina_brasil"
 		}
 	],
 	"settings": {}
