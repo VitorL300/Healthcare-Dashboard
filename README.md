@@ -47,5 +47,15 @@ O dashboard está hospedado e em produção na nuvem.
 🔗 **[Acesse o Dashboard Online Aqui](https://healthcare-dashboard-vitor.streamlit.app/)**
 
 
+<img width="1920" height="822" alt="Captura de Tela (305)" src="https://github.com/user-attachments/assets/8c7e5ac7-3e5c-49ce-ac05-06b0f2303104" />
+
+<img width="1920" height="813" alt="Captura de Tela (306)" src="https://github.com/user-attachments/assets/09b79341-fe79-4f97-910c-9d58cb08b20f" />
+
+<img width="1920" height="808" alt="Captura de Tela (307)" src="https://github.com/user-attachments/assets/0b31e2e3-32d8-4cee-9b18-b280710ccf04" />
+
+
+
+
+
 
 
